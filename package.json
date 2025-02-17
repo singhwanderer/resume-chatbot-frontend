@@ -1,0 +1,16 @@
+{
+  "name": "resume-query-chatbot",
+  "version": "1.0.0",
+  "description": "Chatbot for querying resume details",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.1",
+    "@google-cloud/storage": "^5.12.0",
+    "natural": "^5.0.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
