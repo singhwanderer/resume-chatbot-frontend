@@ -1,83 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resume Query Chatbot</title>
-  <style>
-    /* Basic responsive styling */
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
-      margin: 0;
-      padding: 20px;
-    }
-    .container {
-      max-width: 600px;
-      margin: 0 auto;
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    #chatbox {
-      border: 1px solid #ccc;
-      padding: 10px;
-      height: 300px;
-      overflow-y: auto;
-      margin-bottom: 10px;
-    }
-    input[type="text"] {
-      width: 80%;
-      padding: 10px;
-      font-size: 16px;
-      margin-bottom: 10px;
-    }
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
+  <header>
     <h1>Resume Query Chatbot</h1>
-    <p>Ask me anything about my professional experience!</p>
-    <div id="chatbox"></div>
-    <input type="text" id="userQuestion" placeholder="Type your question..." />
-    <button onclick="submitQuestion()">Ask</button>
-  </div>
-
+  </header>
+  <main>
+    <div id="chat-container">
+      <div id="chat-window">
+        <div id="chat-messages"></div>
+      </div>
+      <input type="text" id="user-input" placeholder="Ask a question about my resume...">
+      <button id="send-button">Send</button>
+    </div>
+  </main>
+  <footer>
+    <p>© 2025 Resume Query Chatbot</p>
+  </footer>
   <script>
-    // Function to submit a question to your Cloud Run backend
-    function submitQuestion() {
-      const question = document.getElementById('userQuestion').value;
-      const chatbox = document.getElementById('chatbox');
+    // Cloud Run backend URL populated
+    const API_URL = 'https://us-central1-resume-query-chatbot.cloudfunctions.net/chatbot-backend';
 
-      // Display the user's question
-      chatbox.innerHTML += '<p><strong>You:</strong> ' + question + '</p>';
+    const chatMessages = document.getElementById('chat-messages');
+    const userInput = document.getElementById('user-input');
+    const sendButton = document.getElementById('send-button');
 
-      // Call the backend API with the updated Cloud Run URL
-      fetch('https://us-central1-resume-query-chatbot.cloudfunctions.net/chatbot-backend', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ query: question })
-      })
-      .then(response => response.json())
-      .then(data => {
-        // Display the bot's answer and a prompt for more details.
-        chatbox.innerHTML += '<p><strong>Bot:</strong> ' + data.answer + '</p>';
-        chatbox.innerHTML += '<p><em>' + data.followUp + '</em></p>';
-        // Clear input and auto-scroll chatbox.
-        document.getElementById('userQuestion').value = '';
-        chatbox.scrollTop = chatbox.scrollHeight;
-      })
-      .catch(error => {
-        console.error('Error:', error);
-        chatbox.innerHTML += '<p><strong>Bot:</strong> Sorry, an error occurred.</p>';
-      });
+    function addMessage(message, sender) {
+      const messageElement = document.createElement('div');
+      messageElement.classList.add('message', sender);
+      messageElement.innerText = message;
+      chatMessages.appendChild(messageElement);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
     }
+
+    async function sendMessage() {
+      const question = userInput.value;
+      if (!question.trim()) return;
+
+      addMessage(question, 'user');
+      userInput.value = '';
+
+      try {
+        const response = await fetch(API_URL, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ question })
+        });
+
+        if (response.ok) {
+          const data = await response.json();
+          addMessage(data.answer, 'bot');
+        } else {
+          addMessage('Error: Failed to get a response from the server.', 'bot');
+        }
+      } catch (error) {
+        addMessage('Error: Unable to reach the server.', 'bot');
+      }
+    }
+
+    sendButton.addEventListener('click', sendMessage);
+    userInput.addEventListener('keypress', (event) => {
+      if (event.key === 'Enter') sendMessage();
+    });
   </script>
 </body>
 </html>
