@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "resume-query-frontend": "resume-query",
+    "resume-queryfire": "resume-query"
+  },
+  "targets": {},
+  "etags": {}
+}

@@ -1,0 +1,73 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+#chat-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;  /* Limit width for mobile view */
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#response {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #e7e7e7;
+  border-radius: 4px;
+  display: none;
+}
+
+/* Media query for larger screens */
+@media (min-width: 600px) {
+  #chat-container {
+    width: 400px;  /* Larger width on screens larger than 600px */
+  }
+}
+
+@media (max-width: 600px) {
+  input[type="text"], button {
+    font-size: 16px; /* Bigger text for mobile */
+  }
+}

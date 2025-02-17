@@ -1,0 +1,114 @@
+[debug] [2025-02-17T05:00:25.082Z] ----------------------------------------------------------------------
+[debug] [2025-02-17T05:00:25.085Z] Command:       /usr/local/nvm/versions/node/v22.13.1/bin/node /usr/local/node_packages/node_modules/.bin/firebase init hosting
+[debug] [2025-02-17T05:00:25.085Z] CLI Version:   13.28.0
+[debug] [2025-02-17T05:00:25.086Z] Platform:      linux
+[debug] [2025-02-17T05:00:25.086Z] Node Version:  v22.13.1
+[debug] [2025-02-17T05:00:25.086Z] Time:          Mon Feb 17 2025 05:00:25 GMT+0000 (Coordinated Universal Time)
+[debug] [2025-02-17T05:00:25.086Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-02-17T05:00:25.186Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-02-17T05:00:25.187Z] > authorizing via signed-in user (mandipinder@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/mandipinder/resume-chatbot/frontend/public
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2025-02-17T05:00:25.192Z] Using project from CLI flag: resume-query
+[debug] [2025-02-17T05:00:25.194Z] Checked if tokens are valid: true, expires at: 1739769734235
+[debug] [2025-02-17T05:00:25.194Z] Checked if tokens are valid: true, expires at: 1739769734235
+[debug] [2025-02-17T05:00:25.196Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/resume-query [none]
+[debug] [2025-02-17T05:00:25.577Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/resume-query 200
+[debug] [2025-02-17T05:00:25.577Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/resume-query {"projectId":"resume-query","projectNumber":"673334123098","displayName":"Resume Query","name":"projects/resume-query","resources":{"hostingSite":"resume-query"},"state":"ACTIVE","etag":"1_28fbb18e-6430-4113-84b8-6177cc427f2f"}
+[info] i  Using project resume-query (Resume Query) 
+[info] 
+=== Hosting Setup
+[debug] [2025-02-17T05:00:25.585Z] Checked if tokens are valid: true, expires at: 1739769734235
+[debug] [2025-02-17T05:00:25.586Z] Checked if tokens are valid: true, expires at: 1739769734235
+[debug] [2025-02-17T05:00:25.586Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/resume-query [none]
+[debug] [2025-02-17T05:00:25.872Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/resume-query 200
+[debug] [2025-02-17T05:00:25.872Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/resume-query {"projectId":"resume-query","projectNumber":"673334123098","displayName":"Resume Query","name":"projects/resume-query","resources":{"hostingSite":"resume-query"},"state":"ACTIVE","etag":"1_28fbb18e-6430-4113-84b8-6177cc427f2f"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2025-02-17T05:02:24.162Z] ----------------------------------------------------------------------
+[debug] [2025-02-17T05:02:24.165Z] Command:       /usr/local/nvm/versions/node/v22.13.1/bin/node /usr/local/node_packages/node_modules/.bin/firebase init hosting
+[debug] [2025-02-17T05:02:24.166Z] CLI Version:   13.28.0
+[debug] [2025-02-17T05:02:24.166Z] Platform:      linux
+[debug] [2025-02-17T05:02:24.166Z] Node Version:  v22.13.1
+[debug] [2025-02-17T05:02:24.166Z] Time:          Mon Feb 17 2025 05:02:24 GMT+0000 (Coordinated Universal Time)
+[debug] [2025-02-17T05:02:24.166Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-02-17T05:02:24.251Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-02-17T05:02:24.252Z] > authorizing via signed-in user (mandipinder@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/mandipinder/resume-chatbot/frontend/public
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2025-02-17T05:02:24.256Z] Using project from CLI flag: resume-query
+[debug] [2025-02-17T05:02:24.257Z] Checked if tokens are valid: true, expires at: 1739769734235
+[debug] [2025-02-17T05:02:24.257Z] Checked if tokens are valid: true, expires at: 1739769734235
+[debug] [2025-02-17T05:02:24.259Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/resume-query [none]
+[debug] [2025-02-17T05:02:24.640Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/resume-query 200
+[debug] [2025-02-17T05:02:24.641Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/resume-query {"projectId":"resume-query","projectNumber":"673334123098","displayName":"Resume Query","name":"projects/resume-query","resources":{"hostingSite":"resume-query"},"state":"ACTIVE","etag":"1_28fbb18e-6430-4113-84b8-6177cc427f2f"}
+[info] i  Using project resume-query (Resume Query) 
+[info] 
+=== Hosting Setup
+[debug] [2025-02-17T05:02:24.649Z] Checked if tokens are valid: true, expires at: 1739769734235
+[debug] [2025-02-17T05:02:24.650Z] Checked if tokens are valid: true, expires at: 1739769734235
+[debug] [2025-02-17T05:02:24.650Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/resume-query [none]
+[debug] [2025-02-17T05:02:24.832Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/resume-query 200
+[debug] [2025-02-17T05:02:24.832Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/resume-query {"projectId":"resume-query","projectNumber":"673334123098","displayName":"Resume Query","name":"projects/resume-query","resources":{"hostingSite":"resume-query"},"state":"ACTIVE","etag":"1_28fbb18e-6430-4113-84b8-6177cc427f2f"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2025-02-17T05:03:30.780Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2025-02-17T05:03:30.957Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2025-02-17T05:03:30.957Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"11.3.1","browserURL":"https://www.gstatic.com/firebasejs/11.3.1/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/11.3.1/firebase.tgz"},"live":{"version":"11.3","browserURL":"https://www.gstatic.com/firebasejs/live/11.3/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/11.3/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/11.3.1/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/11.3.1/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/11.3.1/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/11.3.1/firebase-auth/cordova.js","auth/web-extension":"https://www.gstatic.com/firebasejs/11.3.1/firebase-auth/web-extension.js","functions":"https://www.gstatic.com/firebasejs/11.3.1/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/11.3.1/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/11.3.1/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/11.3.1/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/11.3.1/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/11.3.1/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/11.3.1/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/11.3.1/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/11.3.1/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/11.3.1/firebase-database.js","vertexai":"https://www.gstatic.com/firebasejs/11.3.1/firebase-vertexai.js","data-connect":"https://www.gstatic.com/firebasejs/11.3.1/firebase-data-connect.js","firestore.memory":"https://www.gstatic.com/firebasejs/11.3.1/firebase-firestore.memory.js"}}
+[info] i  public/index.html is unchanged 
+[info] 
+[info] i  Didn't detect a .git folder. Assuming /home/mandipinder/resume-chatbot/frontend/public is the project root. 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=615455697&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
