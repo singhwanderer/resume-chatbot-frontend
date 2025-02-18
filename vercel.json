@@ -1,3 +1,19 @@
 {
-  "version": 2
+  "version": 2,
+  "builds": [
+    {
+      "src": "frontend/public/index.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/frontend/public/$1"
+    }
+  ]
 }

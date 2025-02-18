@@ -1,6 +1,1 @@
-// app.js
-document.addEventListener('DOMContentLoaded', () => {
-  const messageElement = document.createElement('h1');
-  messageElement.textContent = "Welcome to the Resume Chatbot!";
-  document.body.appendChild(messageElement);
-});
+document.getElementById("chatbot").innerHTML = "Hello! How can I help you today?";
